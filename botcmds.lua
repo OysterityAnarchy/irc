@@ -126,7 +126,7 @@ irc.register_bot_command("list", {
 	end
 })
 
-
+--[[
 irc.register_bot_command("whereis", {
 	params = "<player>",
 	description = "Tell the location of <player>",
@@ -143,7 +143,7 @@ irc.register_bot_command("whereis", {
 		return true, fmt:format(args, pos.x, pos.y, pos.z)
 	end
 })
-
+--]]
 
 local starttime = os.time()
 irc.register_bot_command("uptime", {
