@@ -115,7 +115,7 @@ minetest.register_chatcommand("irc_quote", {
 local oldme = minetest.chatcommands["me"].func
 -- luacheck: ignore
 minetest.chatcommands["me"].func = function(name, param, ...)
-	irc.say(("* %s %s"):format(name, param))
+	irc.say(("* %s %s"):format(name, minetest.strip_colors(param)))
 	return oldme(name, param, ...)
 end
 
